@@ -50,7 +50,6 @@ def send_data():
 
     # Iterate through each row in the dataframe
     for index, row in data.iterrows():
-        rowData = row.values.tolist()
         value = 0
         if isinstance(row.iloc[2], (int, float)):
             value = random.uniform(0, row.iloc[2] / num_intervals + 20)
