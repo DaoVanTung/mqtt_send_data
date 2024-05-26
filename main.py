@@ -68,7 +68,7 @@ def send_data():
         client.publish(topic, json.dumps(message))
 
 # Đặt lịch gửi dữ liệu 3p
-schedule.every(10).seconds.do(send_data)
+schedule.every(10).minutes.do(send_data)
 
 print("Scheduler started. Sending data every hour.")
 while True:
